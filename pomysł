@@ -1,0 +1,17 @@
+1. Przyciskiem się włącza urządzenie, po 5 minutach samo się wyłącza.
+	Zielona dioda świeci sygnalizując gotowość.
+	Na segmencie '. .'
+2. Jeszcze raz naciska się przycisk.
+	Żółta dioda mruga powoli aż sensor się podgrzeje. Sygnalizując podgrzewanie.
+	Animacja ładowania na segmencie.
+	Jak skończy na segmencie '. .' a żółta dioda świeci jednolicie
+3. Jeszcze raz naciska się przycisk.
+	Czerwona dioda mruga szybko sygnalizując dmuchanie.
+	Na segmencie '. .'
+4. Po dmuchnieciu jeszcze raz naciska się przycisk
+	Segment LED wyświetla wynik w promilach np. 1.5	
+	Jeśli wynik jest w dopuszczalnej normie by wejść do pojazdu wyświetla się zielona dioda.
+		Jeżeli jest dopuszcalna norma-0.1 świeci żółta dioda.
+		Jeżeli jest	dopuszczalnej normy świeci czerwona dioda
+5. Po długim naciśnięciu wynik się resetuje i wracamy do punktu pierwszego.
+
