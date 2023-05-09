@@ -9,7 +9,8 @@ Device displaying alcohol content in air in permilles.
 * green, yellow and red leds.
 * resistors
 
-
+### Dependencies
+platform.io Arduino framework
 
 
 

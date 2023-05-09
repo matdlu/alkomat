@@ -24,3 +24,6 @@ Urządzenie wyświetlające zawartość alkoholu w powietrzu
 		Jeżeli jest	przekroczy normę świeci czerwona dioda.
 5. Po naciśnięciu wynik się resetuje i wracamy do punktu pierwszego.
 
+### Zależności
+platform.io Arduino framework
+
