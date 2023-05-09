@@ -1,34 +1,39 @@
-#include "Arduino.h"
 #include "pins.h"
+#include "Arduino.h"
 
 namespace Pins {
+    SegmentPins segPins;
+
     void pinModeSink(int pin) {
         pinMode(pin, OUTPUT);
         digitalWrite(pin, LOW);
     }
 
-    void setupSegment() {
-        pinMode(DIGIT1_SEG_PIN, OUTPUT);
-        digitalWrite(DIGIT1_SEG_PIN, LOW);
-        pinMode(DIGIT2_SEG_PIN, OUTPUT);
-        digitalWrite(DIGIT2_SEG_PIN, LOW);
-        pinModeSink(A_SEG_PIN);
-        pinModeSink(B_SEG_PIN);
-        pinModeSink(F_SEG_PIN);
-        pinModeSink(C_SEG_PIN);
-        pinModeSink(DT_SEG_PIN);
-        pinModeSink(E_SEG_PIN);
-        pinModeSink(D_SEG_PIN);
-        pinModeSink(G_SEG_PIN);
-    }
-
     void setup() {
+        // setup LED
         pinMode(BUILTIN_LED_PIN, OUTPUT);
         digitalWrite(BUILTIN_LED_PIN, HIGH);
         pinMode(GREEN_LED_PIN, OUTPUT);
         pinMode(YELLOW_LED_PIN, OUTPUT);
         pinMode(RED_LED_PIN, OUTPUT);
         pinMode(BUTTON_PIN, INPUT_PULLUP);
-        setupSegment();
+
+        // setup segment
+        segPins.a = A_SEG_PIN;
+        segPins.b = B_SEG_PIN;
+        segPins.c = C_SEG_PIN;
+        segPins.d = D_SEG_PIN;
+        segPins.e = E_SEG_PIN;
+        segPins.f = F_SEG_PIN;
+        segPins.g = G_SEG_PIN;
+        segPins.dt = DT_SEG_PIN;
+        segPins.digits_n = 2;
+        segPins.digits[0] = DIGIT1_SEG_PIN;
+        segPins.digits[1] = DIGIT2_SEG_PIN;
+
+        // setup MQ3
+        pinMode(HEATER_MQ3_PIN, OUTPUT);
+        digitalWrite(HEATER_MQ3_PIN, LOW);
+        pinMode(SIGNAL_MQ3_PIN, INPUT);
     }
 }

@@ -1,10 +1,17 @@
 #pragma once
 
+#include "Segment.h"
+#include "Arduino.h"
+
 #define BUILTIN_LED_PIN PC13
 #define GREEN_LED_PIN PA1
 #define YELLOW_LED_PIN PA2
 #define RED_LED_PIN PA3
 #define BUTTON_PIN PB1
+
+// MQ3 alcohol sensor
+#define SIGNAL_MQ3_PIN PA7 // A0 pin on MQ-3
+#define HEATER_MQ3_PIN PA6
 
 // B5621BH segment display
 // Wired from the top, left to right (except DIGIT pins)
@@ -20,5 +27,6 @@
 #define G_SEG_PIN PB9 // G
 
 namespace Pins {
+    extern SegmentPins segPins;
     void setup();
 }

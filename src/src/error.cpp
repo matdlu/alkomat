@@ -1,16 +1,16 @@
 #include <Arduino.h>
-#include "segment.h"
+#include "global.h"
 #include "pins.h"
 
 void error(const char* msg) {
 	Serial.println(msg);
-	Segment::setE();
+	Global::seg.setE();
 }
 
 void error(const char* msg, const char *arg) {
 	Serial.print(msg);
 	Serial.println(arg);
-	Segment::setE();
+	Global::seg.setE();
 }
 
 void debug(const char* msg) {
