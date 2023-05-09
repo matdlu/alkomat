@@ -1,6 +1,8 @@
 ### Description
 Device displaying alcohol content in air in permilles.
 
+![Image](image.png)
+
 ### Parts
 * bluepill microcontroller
 * MQ-3 sensor

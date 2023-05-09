@@ -1,6 +1,8 @@
 ### Opis
 Urządzenie wyświetlające zawartość alkoholu w powietrzu
 
+![Image](image.png)
+
 ### Części
 * mikrokontroler bluepill 
 * MQ-3 sensor
