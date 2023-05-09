@@ -2,7 +2,6 @@
 #include "pins.h"
 #include "led.h"
 #include "global.h"
-#include "mq3.h"
 #include "Timer.h"
 
 using namespace Global;
@@ -65,7 +64,7 @@ void loop()
 		if ( btn.shortReleased() ) {
 			changeState(READY);
 		}
-		Mq3::turnOff();
+		mq3.turnOff();
 		break;
 	case READY:
 		cleanState();
@@ -73,15 +72,15 @@ void loop()
 			changeState(HEATING);
 		}
 		led_on(GREEN_LED_PIN);
-		Mq3::turnOn();
+		mq3.turnOn();
 		break;
 	case HEATING:
 		cleanState();
-		Mq3::turnOn();
+		mq3.turnOn();
 		seg.loading(250);
 		led_blink(YELLOW_LED_PIN, 500);
 		if ( heatingTimer.available(HEATING_TIME) ) {
-			Mq3::calibrate();
+			mq3.calibrate();
 			changeState(BLOW_READY);
 		}
 		break;
@@ -90,7 +89,7 @@ void loop()
 		led_on(RED_LED_PIN);
 		if ( btn.shortReleased() ) {
 			for(int i = 0; i < read_n; i++) {
-				read_sum += Mq3::read();
+				read_sum += mq3.read();
 				led_off(RED_LED_PIN);
 				delay(25);
 				led_on(RED_LED_PIN);
@@ -103,7 +102,7 @@ void loop()
 		break;
 	case RESULT:
 		cleanState();
-		int permille = Mq3::permille(read_avg);
+		int permille = mq3.permille(read_avg);
 		if ( permille < 200 ) {
 			led_on(GREEN_LED_PIN);
 		} else if ( permille < 250 ) {

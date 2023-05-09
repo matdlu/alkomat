@@ -30,10 +30,5 @@ namespace Pins {
         segPins.digits_n = 2;
         segPins.digits[0] = DIGIT1_SEG_PIN;
         segPins.digits[1] = DIGIT2_SEG_PIN;
-
-        // setup MQ3
-        pinMode(HEATER_MQ3_PIN, OUTPUT);
-        digitalWrite(HEATER_MQ3_PIN, LOW);
-        pinMode(SIGNAL_MQ3_PIN, INPUT);
     }
 }

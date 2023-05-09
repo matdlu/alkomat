@@ -24,6 +24,7 @@ struct SegmentPins {
     uint32_t digits[MAX_DIGITS]; 
 };
 
+/* 7 segment display */
 class Segment
 {
 private:

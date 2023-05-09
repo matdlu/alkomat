@@ -8,6 +8,7 @@
 #define BUTTON_ON LOW
 #define BUTTON_OFF HIGH
 
+/* Tactile buttons */
 class Button 
 {
 private:
