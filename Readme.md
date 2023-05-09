@@ -2,7 +2,7 @@
 Device displaying alcohol content in air in permilles.
 
 ### Parts
-* mikrokontroler bluepill
+* bluepill microcontroller
 * MQ-3 sensor
 * 7 segment display
 * tactile switch
