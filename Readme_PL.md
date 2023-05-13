@@ -9,6 +9,7 @@ Urządzenie wyświetlające zawartość alkoholu w powietrzu
 * wyświetlacz 7 segmentowy
 * przycisk tact
 * zielona, żółta i czerwona dioda led
+* tranzystor NPN (BC337)
 * rezystory
 
 ### Działanie
